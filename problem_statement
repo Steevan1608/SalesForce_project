@@ -1,5 +1,4 @@
 Project Title:
-
 Aeroplane Management & Dispatch Workflow
 
 Problem Context
@@ -42,7 +41,7 @@ Visuals: counts by status, by aircraft, by request type, and pending approvals.
 
 Filterability by base, date range, and priority.
 
-Expected Outcome
+Expected Outcome:
 
 Centralized tracking of all aircraft dispatch requests and maintenance work orders in Salesforce.
 
