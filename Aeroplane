@@ -1,0 +1,53 @@
+Project Title:
+
+Aeroplane Management & Dispatch Workflow
+
+Problem Context
+
+An airline/operator receives a large number of aircraft-related requests every day — e.g., flight dispatch requests, maintenance work orders, and crew change requests. Currently the process is manual: requests are collected on paper or spreadsheets, verified by staff, routed through multiple teams (maintenance, dispatch, safety), and tracked via ad-hoc spreadsheets. This causes delays, missed requests, safety risks, and inconsistent operational decisions.
+
+Business Problem
+
+The operator needs an automated system to capture aircraft requests and work orders, track their status, and manage the initial dispatch/verification workflow to reduce human error and improve operational efficiency and safety.
+
+Phase 1 Scope
+
+Capture aircraft requests and work orders in Salesforce using custom objects.
+
+Suggested custom objects: Aircraft Request, Aircraft, Crew, Maintenance Record (lightweight), Dispatch Log (optional).
+
+Collect basic request details:
+
+For dispatch/flight request: Aircraft Registration, Flight Number (or Request ID), Requesting Unit, Flight Type (scheduled/repositioning/test), Planned Departure/Arrival, Estimated Flight Hours, Required Crew.
+
+For maintenance/repair request: Aircraft Registration, Issue Summary, Severity (A/B/C), Reported Hours, Requested By, Location.
+
+Common applicant fields: Contact Person, Contact Info, Priority, Attachments (logbook excerpt, tech log, NOTAMS).
+
+Implement single-level automated approval for initial verification (e.g., Dispatch Officer or Maintenance Officer approval):
+
+Auto-route new requests to the relevant approver based on request type or aircraft base.
+
+Approval outcomes: Approved (cleared for dispatch / proceed to maintenance scheduling), Rejected (requires resubmission), or More Info Required.
+
+Optional: simple business rules (e.g., block dispatch if aircraft has open critical maintenance).
+
+Generate basic status tracking for requests:
+
+Suggested status values: Submitted, Verified, Approved/Cleared, Rejected, In Progress (for maintenance), Completed.
+
+Provide a dashboard/report showing requests by aircraft type/registration and status:
+
+Visuals: counts by status, by aircraft, by request type, and pending approvals.
+
+Filterability by base, date range, and priority.
+
+Expected Outcome
+
+Centralized tracking of all aircraft dispatch requests and maintenance work orders in Salesforce.
+
+Reduced manual effort and fewer missed or lost requests during initial verification.
+
+Faster decision-making for dispatch approvals and quicker turnaround for maintenance prioritization.
+
+Improved operational visibility via reports and dashboards, enabling proactive resource allocation and safer operations.
